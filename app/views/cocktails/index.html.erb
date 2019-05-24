@@ -1,32 +1,26 @@
-<div class="banner" style="background-color: black; )">
-  <div class="container">
-    <h1>Come on in, and stay a while</h1>
-    <p>Sinfully delicious </p>
-    <a class="btn btn-flat" href="#">Apply now</a>
-  </div>
-</div>
 
+<%=  render 'banner' %>
 
-<div class = "card-deck">
-<% @cocktails.each do |cocktail| %>
-  <div class="card" style="width:400px">
-    <% if cocktail.photo.present? %>
-      <%= cl_image_tag cocktail.photo, height:400, width:300   %>
-    <% else %>
-      <%= image_tag "default_photo.jpeg", height:400, width:300 %>
-    <% end %>
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text.</p>
-      <h2><%= link_to cocktail.name, cocktail_path(cocktail), class: "btn btn-primary" %></h2>
+<div class = "drink-grid">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card" style="width:400px;width:300px">
+      <% if cocktail.photo.present? %>
+        <%= cl_image_tag cocktail.photo, height:300, width:300   %>
+      <% else %>
+        <%= image_tag "default_photo.jpeg", height:300, width:300 %>
+      <% end %>
+      <div class="card-body">
+        <div class= "card-background ">
+          <h4 class="card-title text-center"><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+        </div>
+      </div>
     </div>
-  </div>
-
-
-<% end %>
+  <% end %>
 </div>
 
 <%#= link_to "Create a cocktail", new_cocktail_path %>
+
+
 
 
 
