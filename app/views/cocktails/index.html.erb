@@ -1,4 +1,4 @@
-<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);"> -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
     <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
     <p>Change your life and learn to code at one of our campuses around the world.</p>
@@ -6,11 +6,23 @@
   </div>
 </div>
 
+
+<div class = "card-deck">
 <% @cocktails.each do |cocktail| %>
+  <div class="card" style="width:400px">
+    <%= image_tag "img_avatar1.png", height:400, width:300 %>
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+    </div>
+  </div>
 
-  <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+
 <% end %>
-
+</div>
 
 <%= link_to "Create a cocktail", new_cocktail_path %>
+
 
