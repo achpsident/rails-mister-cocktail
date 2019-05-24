@@ -10,7 +10,7 @@
 <div class = "card-deck">
 <% @cocktails.each do |cocktail| %>
   <div class="card" style="width:400px">
-    <%= image_tag "img_avatar1.png", height:400, width:300 %>
+    <%= cl_image_tag cocktail.photo, height:400, width:300   %>
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text.</p>
@@ -24,5 +24,6 @@
 </div>
 
 <%= link_to "Create a cocktail", new_cocktail_path %>
+
 
 
