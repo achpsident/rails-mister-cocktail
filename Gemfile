@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'simple_form'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
